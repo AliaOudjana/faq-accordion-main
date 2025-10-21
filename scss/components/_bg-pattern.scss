@@ -1,0 +1,35 @@
+@use '../util' as u;
+
+.bg-img{
+    width: 100%;
+    isolation: isolate;
+    z-index: -99;
+    position: fixed;
+    top: 0;
+}
+
+.desktop-img{
+    @include u.big{
+        display: block;
+    }
+    @include u.medium{
+        display: block;
+        width: 170%;
+        left: 0;
+    }
+    @include u.small{
+        display: none;
+    }
+}
+
+.mobile-img{
+    @include u.big{
+        display: none;
+    }
+    @include u.medium{
+        display: none;
+    }
+    @include u.small{
+        display: block;
+    }
+}

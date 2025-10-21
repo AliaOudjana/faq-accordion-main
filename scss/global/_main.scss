@@ -1,0 +1,34 @@
+@use '../util' as u;
+
+@font-face {
+    font-family: 'WorkSans';
+    src: url(../assets/fonts/WorkSans-VariableFont_wght.ttf);
+}
+
+*, *::after, *::before{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'WorkSans', sans-serif;
+}
+
+body{
+    margin: 0;
+    display: grid;
+    place-items: center;
+    background: var(--purple-light);
+}
+
+.attribution{
+    color: var(--purple-medium);
+    text-align: center;
+    padding-bottom: 2rem;
+    a{
+        color: var(--purple-dark);
+    }
+    @include u.medium{
+        padding: 0 1rem 2rem;
+    }
+    @include u.small{
+        padding: 0 1rem 2rem;
+    }
+}
